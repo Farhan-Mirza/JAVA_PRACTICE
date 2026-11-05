@@ -4,29 +4,34 @@ import java.util.Scanner;
 
 public class MaxOfThree {
 
-    static double celsiusToFahrenheit(double c) {
-        return c * 9 / 5 + 32;
-    }
-
-    static double fahrenheitToCelsius(double f) {
-        return (f - 32) * 5 / 9;
+    static int max(int a, int b, int c) {
+        return a;
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the temperature: ");
-        double temp = sc.nextDouble();
+        System.out.print("Enter first Number: ");
+        int nbr1 = sc.nextInt();
 
-        System.out.print("Convert to (F = Fahrenheit, C = Celsius): ");
-        char target = Character.toUpperCase(sc.next().charAt(0));
+        System.out.print("Enter second Number: ");
+        int nbr2 = sc.nextInt();
 
-        if (target == 'F') {
-            System.out.printf("%.2f°C = %.2f°F%n", temp, celsiusToFahrenheit(temp));
-        } else if (target == 'C') {
-            System.out.printf("%.2f°F = %.2f°C%n", temp, fahrenheitToCelsius(temp));
-        } else {
-            System.out.println("Invalid conversion.");
+        System.out.print("Enter third Number: ");
+        int nbr3 = sc.nextInt();
+
+        if (nbr1 > nbr2) {
+            System.out.println("The biggest Number is: " +nbr1);
+        } else if (nbr1 < nbr2) {
+            System.out.println("The biggest Number is: " +nbr2);
+        } else if (nbr2 > nbr3) {
+            System.out.println("The biggest Number is: " +nbr2);
+        } else if (nbr2 < nbr3) {
+            System.out.println("The biggest Number is: " +nbr3);
+        } else if (nbr1 > nbr3) {
+            System.out.println("The biggest Number is: " +nbr1);
+        } else if (nbr1 < nbr3) {
+            System.out.println("The biggest Number is: " +nbr3);
         }
 
         sc.close();
