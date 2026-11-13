@@ -8,11 +8,11 @@ public class ArrayBasics {
         int[] marks = new int[5];
         System.out.println("Default value at index 0: " + marks[0]);
 
-        marks[0] = 80;
+        marks[4] = 80;
         marks[1] = 65;
         marks[2] = 90;
         marks[3] = 72;
-        marks[4] = 55;
+        marks[0] = 55;
 
         System.out.println("First item: " + marks[0]);
         System.out.println("Last item: " + marks[4]);
@@ -28,7 +28,7 @@ public class ArrayBasics {
         System.out.println("Third price: " + prices[2]);
 
         // Default values for other types
-        boolean[] flags = new boolean[3];
+        boolean[] flags = new boolean[] {true, false, true};
         String[] names = new String[2];
         System.out.println("Default boolean: " + flags[0]);
         System.out.println("Default String: " + names[0]);
